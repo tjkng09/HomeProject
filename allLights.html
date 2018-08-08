@@ -1,0 +1,158 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+.column {
+    float: left;
+    width: 33.3%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+}
+
+@media screen and (max-width: 650px) {
+    .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.card:hover {
+    cursor: pointer;
+}
+
+.card:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+.container {
+    padding: 0 16px;
+}
+
+.container::after, .row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.title {
+    color: grey;
+    text-align: center;
+    font-family: "Arial";
+}
+
+.name {
+    text-align: center;
+    font-family: "Arial";
+}
+
+input[type=range][orient=verticle] {
+    writing-mode: bt-lr;
+    -webkit-appearance: slider-vertical;
+    width: 8px;
+    height: 175px;
+    padding: 0 5px;
+}
+
+</style>
+
+<script>
+    function changeOffice(element) {
+            var off = "lightOff.png";
+            var on = "lightOn.png";
+            element.src = element.bln ? off : on;
+            element.bln = !element.bln;
+    }
+
+</script>
+
+<title>All Home Lights</title>
+</head>
+
+<body>
+
+
+    <div class="row">
+        <div class="column">
+            <div class="card">
+                <img src="lightOff.png" alt="LightOff" style="width:50%" id="Light" onclick="changeOffice(this)">
+                <input id="range" type="range" orient="verticle" min="0" max="100" />
+                <div class="container">
+                    <h2 class="name">Office Lights</h2>
+                    <p class="title">Single White Hue Light</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <img src="lightOff.png" alt="LightOff" style="width:50%" id="Light" onclick="changeOffice(this)">
+                <input id="range" type="range" orient="verticle" min="0" max="100" />
+                <div class="container">
+                    <h2 class="name">Living Room Lights</h2>
+                    <p class="title">1 White Hue + 1 Hue Strip</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <img src="lightOff.png" alt="LightOff" style="width:50%" id="Light" onclick="changeOffice(this)">
+                <input id="range" type="range" orient="verticle" min="0" max="100" />
+                <div class="container">
+                    <h2 class="name">Kitchen Lights</h2>
+                    <p class="title">Single White Hue Light</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="column">
+            <div class="card">
+                <img src="lightOff.png" alt="LightOff" style="width:50%" id="Light" onclick="changeOffice(this)">
+                <input id="range" type="range" orient="verticle" min="0" max="100" />
+                <div class="container">
+                    <h2 class="name">Bedroom Lights</h2>
+                    <p class="title">Color Hue Bulb + 2 Hue Go's</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <img src="lightOff.png" alt="LightOff" style="width:50%" id="Light" onclick="changeOffice(this)">
+                <input id="range" type="range" orient="verticle" min="0" max="100" />
+                <div class="container">
+                    <h2 class="name">Porch Lights</h2>
+                    <p class="title">Single White Hue Light</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <img src="lightOff.png" alt="LightOff" style="width:50%" id="Light" onclick="changeOffice(this)">
+                <input id="range" type="range" orient="verticle" min="0" max="100" />
+                <div class="container">
+                    <h2 class="name">Hallway Lights</h2>
+                    <p class="title">Color Hue Bulb</p>
+
+    </body>
+</html>

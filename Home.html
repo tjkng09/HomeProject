@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+.column {
+    float: left;
+    width: 33.3%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+}
+
+@media screen and (max-width: 650px) {
+    .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	text-align: center;
+}
+
+.card:hover {
+	cursor: pointer;
+}
+
+.card:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+.container {
+    padding: 0 16px;
+}
+
+.container::after, .row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.title {
+    color: grey;
+	text-align: center;
+	font-family: "Arial";
+}
+
+.name {
+	text-align: center;
+	font-family: "Arial";
+}
+
+input[type=range][orient=verticle] {
+    writing-mode: bt-lr;
+    -webkit-appearance: slider-vertical;
+    width: 8px;
+    height: 175px;
+    padding: 0 5px;
+}
+
+</style>
+
+<script>
+    function changeOffice(element) {
+            var off = "lightOff.png";
+            var on = "lightOn.png";
+            element.src = element.bln ? off : on;
+            element.bln = !element.bln;
+    }
+
+</script>
+
+<title>Home Automation</title>
+</head>
+
+<body>
+
+    <div class="row">
+        <div class="column">
+            <div class="card">
+                <img src="weather.png" alt="Weather" style="width:75%" id="weather">
+                <div class="container">
+                    <h2 class="name">Today's Weather</h2>
+                    <p class="title">Click for Today's Forecast</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <img src="traffic.png" alt="Traffic" style="width:75%" id="traffic">
+                <div class="container">
+                    <h2 class="name">Traffic</h2>
+                    <p class="title">Morning Commute Time</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <img src="garden.png" alt="Garden" style="width:75%" id="garden">
+                <div class="container">
+                    <h2 class="name">Garden Automation</h2>
+                    <p class="title">Click for Schedule</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="column">
+            <div class="card">
+                <img src="nest.png" alt="Nest" style="width:75%" id="nest">
+                <div class="container">
+                    <h2 class="name">Climate Control</h2>
+                    <p class="title">Nest Thermostat</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card" onclick="window.location=('mainLights.html')">
+                <img src="lightOff.png" alt="LightOff" style="width:50%" id="Light" onclick="changeOffice(this)">
+                <input id="range" type="range" orient="verticle" min="0" max="100" />
+                <div class="container">
+                    <h2 class="name">Main Lights</h2>
+                    <p class="title">Living Room, Kitchen, Hallway</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card" onclick="window.location=('allLights.html')">
+                <img src="lightOff.png" alt="LightOff" style="width:50%" id="Light" onclick="changeOffice(this)">
+                <input id="range" type="range" orient="verticle" min="0" max="100" />
+                <div class="container">
+                    <h2 class="name">All Lights</h2>
+                    <p class="title">All Hue Lights</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
